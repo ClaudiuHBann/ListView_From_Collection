@@ -1,0 +1,11 @@
+namespace LVC
+{
+    runtimeclass Contact : Microsoft.UI.Xaml.Data.INotifyPropertyChanged
+    {
+        Contact(String firstName, String lastName, String company);
+
+        String FirstName;
+        String LastName;
+        String Company;
+    }
+}

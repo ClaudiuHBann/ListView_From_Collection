@@ -6,4 +6,49 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+
+    <ListView ItemsSource="{x:Bind MainViewModel.Contacts}" Height="400">
+        <ListView.Resources>
+            <SolidColorBrush x:Key="ListViewItemBackgroundSelected" Color="magenta" />
+            <SolidColorBrush x:Key="ListViewItemBackgroundSelectedPointerOver" Color="red" />
+        </ListView.Resources>
+        <ListView.HeaderTemplate>
+            <DataTemplate>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="300"/>
+                        <ColumnDefinition Width="300"/>
+                        <ColumnDefinition Width="200"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Border BorderBrush="Lime" BorderThickness="0,0,0,1">
+                        <TextBlock Text="First Name" Margin="18,0,0,0" FontWeight="Bold"/>
+                    </Border>
+                    <Border Grid.Column="1" BorderBrush="Lime" BorderThickness="0,0,0,1">
+                        <TextBlock Text="Last Name" Margin="18,0,0,0" FontWeight="Bold"/>
+                    </Border>
+                    <Border Grid.Column="2" BorderBrush="Lime" BorderThickness="0,0,0,1">
+                        <TextBlock Text="Company" Margin="18,0,0,0" FontWeight="Bold"/>
+                    </Border>
+                </Grid>
+            </DataTemplate>
+        </ListView.HeaderTemplate>
+
+        <ListView.ItemTemplate>
+            <DataTemplate x:DataType="local:Contact">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="300"/>
+                        <ColumnDefinition Width="300"/>
+                        <ColumnDefinition Width="200"/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text="{x:Bind Path=FirstName, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="1" Text="{x:Bind Path=LastName, Mode=TwoWay}"/>
+                    <TextBlock Grid.Column="2" Text="{x:Bind Path=Company, Mode=TwoWay}"/>
+                </Grid>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+
 </Window>

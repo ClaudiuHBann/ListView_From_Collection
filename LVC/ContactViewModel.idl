@@ -1,0 +1,12 @@
+import "Contact.idl";
+
+namespace LVC
+{
+    runtimeclass ContactViewModel
+    {
+        ContactViewModel();
+
+        Contact Contact { get; };
+        Windows.Foundation.Collections.IObservableVector<Contact> Contacts { get; };
+    }
+}
