@@ -7,7 +7,7 @@ namespace winrt::LVC::implementation
 struct Contact : ContactT<Contact>
 {
     Contact() = default;
-    Contact(hstring const &firstName, hstring const &lastName, hstring const &company);
+    Contact(hstring const &firstName, hstring const &lastName);
 
     hstring FirstName();
     void FirstName(hstring const &value);
@@ -15,16 +15,12 @@ struct Contact : ContactT<Contact>
     hstring LastName();
     void LastName(hstring const &value);
 
-    hstring Company();
-    void Company(hstring const &value);
-
     event_token PropertyChanged(Microsoft::UI::Xaml::Data::PropertyChangedEventHandler const &handler);
     void PropertyChanged(event_token const &token) noexcept;
 
   private:
     hstring mFirstName;
     hstring mLastName;
-    hstring mCompany;
 
     event<Microsoft::UI::Xaml::Data::PropertyChangedEventHandler> mPropertyChanged;
 };

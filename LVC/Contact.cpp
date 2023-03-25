@@ -7,8 +7,7 @@
 namespace winrt::LVC::implementation
 {
 
-Contact::Contact(hstring const &firstName, hstring const &lastName, hstring const &company)
-    : mFirstName(firstName), mLastName(lastName), mCompany(company)
+Contact::Contact(hstring const &firstName, hstring const &lastName) : mFirstName(firstName), mLastName(lastName)
 {
 }
 
@@ -37,20 +36,6 @@ void Contact::LastName(hstring const &value)
     {
         mLastName = value;
         mPropertyChanged(*this, Microsoft::UI::Xaml::Data::PropertyChangedEventArgs(L"LastName"));
-    }
-}
-
-hstring Contact::Company()
-{
-    return mCompany;
-}
-
-void Contact::Company(hstring const &value)
-{
-    if (mCompany != value)
-    {
-        mCompany = value;
-        mPropertyChanged(*this, Microsoft::UI::Xaml::Data::PropertyChangedEventArgs(L"Company"));
     }
 }
 

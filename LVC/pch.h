@@ -11,3 +11,4 @@ using namespace winrt;
 
 using namespace Windows;
 using namespace Foundation;
+using namespace Collections;

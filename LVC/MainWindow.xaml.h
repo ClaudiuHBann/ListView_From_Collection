@@ -1,6 +1,5 @@
 #pragma once
 
-#include "ContactViewModel.h"
 #include "MainWindow.g.h"
 
 namespace winrt::LVC::implementation
@@ -9,11 +8,10 @@ struct MainWindow : MainWindowT<MainWindow>
 {
     MainWindow();
 
-    LVC::ContactViewModel MainViewModel();
-    void MainViewModel(LVC::ContactViewModel const &value);
+    IObservableVector<LVC::Contact> Contacts();
 
   private:
-    LVC::ContactViewModel mMainViewModel;
+    IObservableVector<LVC::Contact> mContacts{};
 };
 } // namespace winrt::LVC::implementation
 

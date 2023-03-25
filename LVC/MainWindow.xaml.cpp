@@ -9,18 +9,14 @@ namespace winrt::LVC::implementation
 {
 
 MainWindow::MainWindow()
+    : mContacts(single_threaded_observable_vector<LVC::Contact>({{L"Claudiu", L"HBann"}, {L"Someone", L"Else"}}))
 {
     InitializeComponent();
 }
 
-LVC::ContactViewModel MainWindow::MainViewModel()
+Windows::Foundation::Collections::IObservableVector<LVC::Contact> MainWindow::Contacts()
 {
-    return mMainViewModel;
-}
-
-void MainWindow::MainViewModel(LVC::ContactViewModel const &value)
-{
-    mMainViewModel = value;
+    return mContacts;
 }
 
 } // namespace winrt::LVC::implementation

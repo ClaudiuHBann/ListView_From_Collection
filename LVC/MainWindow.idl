@@ -1,12 +1,12 @@
-import "ContactViewModel.idl";
+import "Contact.idl";
 
 namespace LVC
 {
-    [default_interface]
-    runtimeclass MainWindow : Microsoft.UI.Xaml.Window
-    {
-        MainWindow();
+	[default_interface]
+	runtimeclass MainWindow : Microsoft.UI.Xaml.Window
+	{
+		MainWindow();
 
-        ContactViewModel MainViewModel;
-    }
+		Windows.Foundation.Collections.IObservableVector<Contact> Contacts{ get; };
+	}
 }

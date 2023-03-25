@@ -12,9 +12,6 @@
     <Midl Include="Contact.idl">
       <Filter>Model</Filter>
     </Midl>
-    <Midl Include="ContactViewModel.idl">
-      <Filter>ViewModel</Filter>
-    </Midl>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
@@ -22,17 +19,11 @@
     <ClCompile Include="Contact.cpp">
       <Filter>Model</Filter>
     </ClCompile>
-    <ClCompile Include="ContactViewModel.cpp">
-      <Filter>ViewModel</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
     <ClInclude Include="Contact.h">
       <Filter>Model</Filter>
-    </ClInclude>
-    <ClInclude Include="ContactViewModel.h">
-      <Filter>ViewModel</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -64,9 +55,6 @@
     </Filter>
     <Filter Include="Model">
       <UniqueIdentifier>{7ba3361a-0045-41cc-9fb6-61c1ea096698}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="ViewModel">
-      <UniqueIdentifier>{3281a7ec-a369-43c2-8783-564ed3cd7750}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
