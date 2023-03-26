@@ -9,22 +9,16 @@
   <ItemGroup>
     <Midl Include="App.idl" />
     <Midl Include="MainWindow.idl" />
-    <Midl Include="Contact.idl">
-      <Filter>Model</Filter>
-    </Midl>
+    <Midl Include="Contact.idl" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp" />
     <ClCompile Include="$(GeneratedFilesDir)module.g.cpp" />
-    <ClCompile Include="Contact.cpp">
-      <Filter>Model</Filter>
-    </ClCompile>
+    <ClCompile Include="Contact.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h" />
-    <ClInclude Include="Contact.h">
-      <Filter>Model</Filter>
-    </ClInclude>
+    <ClInclude Include="Contact.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Assets\Wide310x150Logo.scale-200.png">
@@ -52,9 +46,6 @@
   <ItemGroup>
     <Filter Include="Assets">
       <UniqueIdentifier>{160768bc-be38-4877-81d9-d9f6b96a57f0}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Model">
-      <UniqueIdentifier>{7ba3361a-0045-41cc-9fb6-61c1ea096698}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

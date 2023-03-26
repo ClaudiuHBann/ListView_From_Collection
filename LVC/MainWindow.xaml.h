@@ -8,6 +8,8 @@ struct MainWindow : MainWindowT<MainWindow>
 {
     MainWindow();
 
+    void OnButtonClickChange(IInspectable const &sender, Microsoft::UI::Xaml::RoutedEventArgs const &e);
+
     IObservableVector<LVC::Contact> Contacts();
 
   private:

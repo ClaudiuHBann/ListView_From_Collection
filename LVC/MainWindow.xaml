@@ -7,15 +7,19 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <ListView ItemsSource="{x:Bind Contacts}">
-        <ListView.ItemTemplate>
-            <DataTemplate x:DataType="local:Contact">
-                <StackPanel Orientation="Horizontal">
-                    <TextBlock Text="{x:Bind Path=FirstName, Mode=TwoWay}" Margin="0,0,5,0"/>
-                    <TextBlock Text="{x:Bind Path=LastName, Mode=TwoWay}"/>
-                </StackPanel>
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
+    <StackPanel>
+        <Button Content="Change" Click="OnButtonClickChange"/>
+
+        <ListView ItemsSource="{x:Bind Contacts}">
+            <ListView.ItemTemplate>
+                <DataTemplate x:DataType="local:Contact">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{x:Bind Path=FirstName, Mode=TwoWay}" Margin="0,0,5,0"/>
+                        <TextBlock Text="{x:Bind Path=LastName, Mode=TwoWay}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackPanel>
 
 </Window>

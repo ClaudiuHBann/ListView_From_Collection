@@ -14,6 +14,15 @@ MainWindow::MainWindow()
     InitializeComponent();
 }
 
+void MainWindow::OnButtonClickChange(IInspectable const & /*sender*/,
+                                     Microsoft::UI::Xaml::RoutedEventArgs const & /*e*/)
+{
+    for (auto contact : Contacts())
+    {
+        contact.LastName(contact.LastName() + L" " + contact.LastName());
+    }
+}
+
 Windows::Foundation::Collections::IObservableVector<LVC::Contact> MainWindow::Contacts()
 {
     return mContacts;
